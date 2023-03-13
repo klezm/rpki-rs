@@ -1,3 +1,20 @@
 {
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    // https://rust-analyzer.github.io/manual.html
     "rust-analyzer.cargo.extraEnv": {"RUSTUP_TOOLCHAIN": "stable"},
+    // "rust-analyzer.cargo.target": null,
+    // "rust-analyzer.cargo.buildScripts.invocationLocation": "workspace",
+    // "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.linkedProjects": [
+        "Cargo.toml",
+        "fuzz/Cargo.toml"
+    ],
+    "rust-analyzer.files.excludeDirs": [
+        "corpus",
+        "test-data",
+        "target",
+        "fuzz/target"
+    ],
 }
