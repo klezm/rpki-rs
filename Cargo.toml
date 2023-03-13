@@ -40,6 +40,14 @@ tokio           = { version="1.0", features=["net", "macros"]}
 
 [features]
 default = []
+# default = [
+#     "ca",
+#     # "crypto",
+#     # "repository",
+#     # "rrdp",
+#     # "rtr",
+#     # "slurm",
+# ]
 
 # Main components of the crate.
 ca         = [ "repository", "serde-support", "rrdp" ]

@@ -1,0 +1,43 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "Rust",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"GitHub.copilot",
+				"GitHub.copilot-labs",
+				"eamodio.gitlens",
+				"redhat.vscode-xml",
+				"ms-vscode.live-server"
+			]
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true,
+			"installZsh": true,
+			"username": "vscode",
+            "uid": "1000",
+            "gid": "1000",
+            "upgradePackages": true
+		}
+		// "ghcr.io/devcontainers/features/sshd:1": {} // Prerequisite for using Codespaces in JetBrains IDEs
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": ""
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

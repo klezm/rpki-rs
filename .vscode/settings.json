@@ -1,0 +1,3 @@
+{
+    "rust-analyzer.cargo.extraEnv": {"RUSTUP_TOOLCHAIN": "stable"},
+}
