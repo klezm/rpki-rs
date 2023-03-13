@@ -12,11 +12,11 @@ rustup default
 echo "---------- cargo +nightly fuzz list ----------"
 cargo +nightly fuzz list
 echo "---------- make-corpus.sh ----------"
-./make-corpus.sh
+$SCRIPT_DIR/make-corpus.sh
 # echo "---------- delete all Cargo.lock's ----------"
 # find . -name "Cargo.lock" -type f -delete -print
 # echo "---------- cargo clean ./ & fuzz/ ----------"
 # find . -name Cargo.toml -type f -exec dirname {} \; | xargs -t -I % cargo +nightly -C % clean
 echo "---------- fuzz run ----------"
-cargo +nightly --locked fuzz run fuzz_target_1 corpus/idcer -- -only_ascii=1 -seed=0 --max-total_time=30 -ignore_crashes=1
-# cargo +nightly fuzz run fuzz_target_1 corpus/idcer -- -only_ascii=1 -seed=0 --max-total_time=30 -ignore_crashes=1
+cargo +nightly --locked fuzz run fuzz_target_1 corpus/idcer -- -only_ascii=1 -seed=0 -max_total_time=10 -ignore_crashes=1
+# cargo +nightly --locked fuzz run fuzz_target_rrdp corpus/xml/snapshot -- -only_ascii=1 -seed=0 -max_total_time=10 -ignore_crashes=1
